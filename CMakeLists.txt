@@ -26,8 +26,9 @@ target_link_libraries(${PROJECT_NAME}
     ${GSTREAMER_BASE_LIBRARIES}
 )
 
+set(INSTALL_PATH "/lib/${CMAKE_LIBRARY_ARCHITECTURE}/gstreamer-1.0")
 install(TARGETS ${PROJECT_NAME}
     COMPONENT libfpslogger
-    LIBRARY 
-      DESTINATION /lib/x86_64-linux-gnu/gstreamer-1.0
+    LIBRARY
+    DESTINATION ${INSTALL_PATH}
 )
